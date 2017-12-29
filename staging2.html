@@ -16,15 +16,30 @@
 
   <!-- More CSS -->
   <link href="skeleton.css" rel="stylesheet" type="text/css">
+  <style>
+    #hero {
+      background-image:url(https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg);
+      background-size:cover;
+      position:relative;
+    }
+    .header {
+      position:absolute;
+      top:50%;
+      color:#fff;
+      -ms-transform: translate(0,-50%); /* IE 9 */
+      -webkit-transform: translate(0,-50%); /* Safari */
+      transform: translate(0,-50%);
+    }
+  </style>
 
 </head>
 
 <body>
 
-  <div class="container">
+  <div id="hero" class="container">
 
     <!-- Header -->
-    <div class="row">
+    <div class="row header">
 
       <!-- Headline -->
 
@@ -32,7 +47,7 @@
 
       <div class="five columns">
         <h1>Slack Recruiter</h1>
-        <h2>Grow your team entirely in Slack!</h2>
+        <h3>Grow your team entirely in Slack!</h3>
       </div>
 
       <!-- MailChimp Signup Form -->
