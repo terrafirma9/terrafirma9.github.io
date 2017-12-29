@@ -9,9 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- MailChimp Styles -->
-  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
   <style type="text/css">
-  	#mc_embed_signup{background:none; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
   </style>
 
   <!-- My Styles -->
@@ -32,62 +32,74 @@
   }
 
   .header {
+    position:absolute;
+    top:50%;
     text-align:center;
+    width:100%;
     color:#fff;
+    font-size:4rem;
     -ms-transform: translate(0,-50%); /* IE 9 */
       -webkit-transform: translate(0,-50%); /* Safari */
       transform: translate(0,-50%);
   }
 
-  .header h1 {
-    font-size: 3.3rem;
-  }
-
   .header h2 {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   </style>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 
 <body>
-  <div id="hero">
-    <div class="container">
-      <div class="row">
-        <div class="spacer">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col"></div>
-        <div class="col-6 header">
-          <!-- Headline -->
-          <h1> Slack Recruiter </h1>
-          <h2>Grow your team entirely in Slack!</h2>
 
-          <!-- MailChimp Signup -->
-          <div id="mc_embed_signup">
-            <form action="https://github.us17.list-manage.com/subscribe/post?u=a1a6911199a8f23fd26221d04&amp;id=c0d2dfea18" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-              <label for="mce-EMAIL">Subscribe to our mailing list</label>
-              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Sign up with email to get notified" required>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a1a6911199a8f23fd26221d04_c0d2dfea18" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </form>
-        </div>
-        <div class="col"></div>
+  <div id="hero">
+
+    <!-- Header -->
+    <h1>Slack Recruiter</h1>
+    <h2>Grow your team entirely in Slack!</h2>
+
+    <!-- MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form action="https://github.us17.list-manage.com/subscribe/post?u=a1a6911199a8f23fd26221d04&amp;id=c0d2dfea18" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+      	<h2>Subscribe to our mailing list</h2>
+      <div class="mc-field-group">
+      	<label for="mce-EMAIL">Email Address </label>
+      	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
       </div>
+      	<div id="mce-responses" class="clear">
+      		<div class="response" id="mce-error-response" style="display:none"></div>
+      		<div class="response" id="mce-success-response" style="display:none"></div>
+      	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a1a6911199a8f23fd26221d04_c0d2dfea18" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
     </div>
+
   </div>
 
-  <!-- Bootstrap Scripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script>
+    jQuery(document).ready(function($){
+     // Defining a function to set size for #hero
+      function fullscreen(){
+          jQuery('#hero').css({
+              width: jQuery(window).width(),
+              height: jQuery(window).height()
+          });
+      }
+
+      fullscreen();
+
+    // Run the function in case of window resize
+    jQuery(window).resize(function() {
+         fullscreen();
+      });
+
+    });
+  </script>
+
 </body>
 
 </html>
