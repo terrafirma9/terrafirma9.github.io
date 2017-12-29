@@ -19,11 +19,24 @@
   body {
     margin: 0px 0px;
   }
+
   #hero {
     background-image:url(https://terrafirma9.github.io/startup-hero.png);
     background-size:cover;
     position:relative;
     height:100vh;
+  }
+
+  .header {
+    position:absolute;
+    top:50%;
+    text-align:center;
+    width:100%;
+    color:#fff;
+    font-size:36px;
+    -ms-transform: translate(0,-50%); /* IE 9 */
+      -webkit-transform: translate(0,-50%); /* Safari */
+      transform: translate(0,-50%);
   }
   </style>
 
@@ -32,9 +45,12 @@
 </head>
 
 <body>
-  <h1>Slack Recruiter</h1>
-  <h2>Grow your team entirely in Slack.</h2>
-
+  <div id="hero">
+    <div class="header">
+      <h1> Slack Recruiter </h1>
+      <h2>Grow your team entirely in Slack!</h2>
+    </div>
+  </div>
   <p>Recruiting high-quality candidates takes a lot of work, but lots of small businesses still use hacked-together systems of email and spreadsheets. Alternatively, they pay a lot for a full-on solution that might be more than what they need.</p>
   <p>Slack Recruiter helps startups who plan to grow, from tracking potential candidates in your network to moving applicants through the hiring process.</p>
 
